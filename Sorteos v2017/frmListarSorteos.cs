@@ -77,27 +77,23 @@ namespace Sorteos_v2017
                         {
                             partGanador = db.Participantes.Find(GanadorId);
                         }
-                        //MessageBox.Show(partGanador.ToString());
                         cbSorteoRef.Enabled = false;
                         cbSorteoRef.SelectedItem = Ganador.SorteoReferencia;
                         txtGanador.Text = partGanador.ToString();
-                        txtNumGanador.Text = NumGanador.ToString();// NumGanador.ToString();                    
+                        txtNumGanador.Text = NumGanador.ToString();                   
                         txtNumGanador.Enabled = false;
                         txtNumSorteoReferencia.Text = Ganador.NumeroSorteoReferencia.ToString();
                         txtNumSorteoReferencia.Enabled = false;
                         txtEnlaceVerificacion.Text = Ganador.LinkVerificacionSorteo;
-                        //txtEnlaceVerificacion.Enabled = false;
                         txtEnlaceVerificacion.ReadOnly = true;
                         btnSaveWinner.Enabled = false;
                     }
                     else
                     {
                         cbSorteoRef.Enabled = true;
-                        txtGanador.Text = "";//Ganador;
-                        //txtNumGanador.Text = NumGanador.ToString();
+                        txtGanador.Text = "";
                         txtNumSorteoReferencia.Enabled = true;
                         txtNumGanador.Enabled = true;
-                        //txtEnlaceVerificacion.Enabled = true;
                         txtEnlaceVerificacion.ReadOnly = false;
                         btnSaveWinner.Enabled = true;
                     }
@@ -106,11 +102,9 @@ namespace Sorteos_v2017
                 {
                     panelGanador.Visible = false;
                     cbSorteoRef.Enabled = true;
-                    txtGanador.Text = "";//Ganador;
-                    //txtNumGanador.Text = NumGanador.ToString();
+                    txtGanador.Text = "";
                     txtNumSorteoReferencia.Enabled = true;
                     txtNumGanador.Enabled = true;
-                    //txtEnlaceVerificacion.Enabled = true;
                     txtEnlaceVerificacion.ReadOnly = false;
                     btnSaveWinner.Enabled = true;
                 }                
@@ -134,7 +128,6 @@ namespace Sorteos_v2017
                 {
                     string[] row1 = { boleto.CodigoValidacion.ToString().ToUpper() };
                     lvParticipantesBoletos.Items.Add(boleto.BoletoElectronico.ToString()).SubItems.AddRange(row1);
-                    //progressBar1.Value += 1;
                 }
             }
             catch (Exception ex)

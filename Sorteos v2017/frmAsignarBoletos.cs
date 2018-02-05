@@ -51,7 +51,6 @@ namespace Sorteos_v2017
             catch (Exception ex)
             {
                 MessageBox.Show(this, ex.Message, "Mensaje del sistema [" + ex.GetType().ToString() + "]", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //MessageBox.Show(this, ex.Message, "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -73,7 +72,6 @@ namespace Sorteos_v2017
             catch (Exception ex)
             {
                 MessageBox.Show(this, ex.Message, "Mensaje del sistema [" + ex.GetType().ToString() + "]", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //MessageBox.Show(this, ex.Message, "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -85,13 +83,10 @@ namespace Sorteos_v2017
                 {
                     throw new ArgumentOutOfRangeException("Número de boletos", $"Numero de boletos electrónicos no disponibles, quedan {(MAX_BOLETOS-Otorgados.Count)} boletos electrónicos");
                 }
-                ////MessageBox.Show( $"ID Participante: {idParticipante} ID Sorteo: {SorteoId}" );
-                //throw new NotImplementedException( "Función no implementada" );
-                Generados.Clear();
-                //Otorgados.Clear();
-                lbNumParticipantes.Items.Clear();
 
-                //Otorgados = NBoleto.ObtenerNumerosOtorgados(SorteoId).ToList();
+                Generados.Clear();
+                lbNumParticipantes.Items.Clear();
+                
                 Random NumeroParticipante = new Random();
 
                 for (int i = 0; i < nudNumeroBoletos.Value; )
@@ -109,7 +104,6 @@ namespace Sorteos_v2017
             catch (Exception ex)
             {
                 MessageBox.Show(this, ex.Message, "Mensaje del sistema [" + ex.GetType().ToString() + "]", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //MessageBox.Show(this, ex.Message, "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -145,7 +139,6 @@ namespace Sorteos_v2017
             catch (Exception ex)
             {
                 MessageBox.Show(this, ex.Message, "Mensaje del sistema [" + ex.GetType().ToString() + "]", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //MessageBox.Show(this, ex.Message, "Mensaje del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -174,8 +167,6 @@ namespace Sorteos_v2017
                     ParticipanteId = 0;
                     nudNumeroBoletos.Value = 0;
                     nudNumeroElegido.Value = 0;
-                    //rbAsignacionAutomatica.Checked = rbAsignacionAutomatica.Checked ? false : true;
-                    //rbAsignacionManual.Checked = rbAsignacionManual.Checked ? false : true;
                     btnAsigarAleatorios.Visible = false;                    
                     txtParticipanteSeleccionado.Clear();
                     txtParticipanteSeleccionado.Focus();
